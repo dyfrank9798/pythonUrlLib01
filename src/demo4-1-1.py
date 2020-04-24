@@ -62,8 +62,10 @@ def go():
             #         print(parents(key)[-1])
             for url in unseen:
                 # print("正在爬取:"+url)
-                html = pool.apply_async(crawl, args=(url,)).get()
-                result = pool.apply_async(parse, args=(html,)).get()
+                # html = pool.apply_async(crawl, args=(url,)).get() //放入连接池
+                html = crawl(url)
+                # result = pool.apply_async(parse, args=(html,)).get()
+                result = parse(html)
                 count +=1
                 if str.strip(result[0]) =='义项' or str.strip(result[0]) =='百度百科：多义词':
                     continue
