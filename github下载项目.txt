@@ -1,0 +1,17 @@
+下载github项目
+1.先安装git
+2.要生成ssh密钥
+3.github去创建ssh的公钥
+4.idea连接git
+idea + git +github
+
+
+上传文件。上传后，log里面是有的。上传到github是必须要
+git->repository->push
+
+
+如果pip always timed out :
+pip --default-timeout=100 install
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple lxml
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple requests
